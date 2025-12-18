@@ -13,16 +13,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 10%;
 
-    --primary: 150 50% 35%;
+    --primary: 30 35% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 30 100% 50%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 35 40% 85%;
+    --secondary-foreground: 30 35% 25%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 30 20% 94%;
+    --muted-foreground: 30 15% 40%;
 
-    --accent: 280 65% 55%;
+    --accent: 200 25% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -36,6 +36,8 @@
 
     --gold: 45 100% 51%;
     --gold-dark: 38 92% 40%;
+    --beige: 35 40% 88%;
+    --cream: 40 30% 95%;
 
     --sidebar-background: 0 0% 98%;
 

@@ -65,7 +65,9 @@ export default {
 				gold: {
 					DEFAULT: 'hsl(var(--gold))',
 					dark: 'hsl(var(--gold-dark))'
-				}
+				},
+				beige: 'hsl(var(--beige))',
+				cream: 'hsl(var(--cream))'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

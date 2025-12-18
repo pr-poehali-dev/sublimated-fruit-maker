@@ -27,91 +27,68 @@ const Index = () => {
 
         <section className="space-y-16 animate-fade-in">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: 'Montserrat, sans-serif' }}>Основной логотип</h2>
-            <p className="text-lg text-muted-foreground">Полная версия с символом качества</p>
+            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: 'Montserrat, sans-serif' }}>Варианты логотипа</h2>
+            <p className="text-lg text-muted-foreground">Выберите подходящий стиль для вашего бренда</p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-10">
-            <Card className="p-16 flex items-center justify-center bg-white/90 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 border border-border/30 hover:border-primary/30 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative">
-                <ComfortTextileLogo variant="full" size="lg" />
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-12 flex flex-col items-center justify-center gap-6 hover:shadow-2xl transition-all duration-500 group bg-white/90 backdrop-blur-sm border-2 border-border/30 hover:border-primary/40">
+              <Badge className="shadow-md">Вариант 1</Badge>
+              <div className="group-hover:scale-105 transition-transform duration-300">
+                <ComfortTextileLogo variant="variant1" size="lg" />
               </div>
+              <p className="text-sm text-muted-foreground text-center">Минималистичный с галочкой качества</p>
             </Card>
-            <Card className="p-16 flex items-center justify-center bg-gradient-to-br from-beige/30 via-cream/50 to-beige/30 backdrop-blur-sm hover:shadow-2xl transition-all duration-500 border border-border/30 hover:border-accent/30 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-              <div className="relative">
-                <ComfortTextileLogo variant="full" size="lg" />
+            
+            <Card className="p-12 flex flex-col items-center justify-center gap-6 hover:shadow-2xl transition-all duration-500 group bg-white/90 backdrop-blur-sm border-2 border-border/30 hover:border-primary/40">
+              <Badge className="shadow-md">Вариант 2</Badge>
+              <div className="group-hover:scale-105 transition-transform duration-300">
+                <ComfortTextileLogo variant="variant2" size="lg" />
               </div>
+              <p className="text-sm text-muted-foreground text-center">Строгий квадратный с монограммой CT</p>
+            </Card>
+            
+            <Card className="p-12 flex flex-col items-center justify-center gap-6 hover:shadow-2xl transition-all duration-500 group bg-white/90 backdrop-blur-sm border-2 border-border/30 hover:border-primary/40">
+              <Badge className="shadow-md">Вариант 3</Badge>
+              <div className="group-hover:scale-105 transition-transform duration-300">
+                <ComfortTextileLogo variant="variant3" size="lg" />
+              </div>
+              <p className="text-sm text-muted-foreground text-center">Элегантный с волнами ткани</p>
             </Card>
           </div>
         </section>
 
         <section className="space-y-16 animate-fade-in">
           <div className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: 'Montserrat, sans-serif' }}>Вариации размеров</h2>
-            <p className="text-lg text-muted-foreground">Адаптивные версии для разных форматов</p>
+            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: 'Montserrat, sans-serif' }}>Вариации в разных фонах</h2>
+            <p className="text-lg text-muted-foreground">Как логотип выглядит на различных подложках</p>
             <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-accent to-transparent mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <Card className="p-10 flex flex-col items-center justify-center gap-8 hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm border border-border/30 hover:border-primary/30 group">
-              <Badge className="shadow-md">Компактный</Badge>
-              <div className="group-hover:scale-105 transition-transform duration-300">
-                <ComfortTextileLogo variant="full" size="sm" />
-              </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-12 flex items-center justify-center bg-white hover:shadow-2xl transition-all duration-500 border border-border/30">
+              <ComfortTextileLogo variant="variant1" size="md" />
             </Card>
-            <Card className="p-10 flex flex-col items-center justify-center gap-8 hover:shadow-2xl transition-all duration-500 bg-white/95 backdrop-blur-sm border-2 border-primary/30 shadow-lg group">
-              <Badge variant="secondary" className="shadow-md border border-primary/20">Основной</Badge>
-              <div className="group-hover:scale-105 transition-transform duration-300">
-                <ComfortTextileLogo variant="full" size="md" />
-              </div>
+            <Card className="p-12 flex items-center justify-center bg-beige hover:shadow-2xl transition-all duration-500 border border-border/30">
+              <ComfortTextileLogo variant="variant2" size="md" />
             </Card>
-            <Card className="p-10 flex flex-col items-center justify-center gap-8 hover:shadow-2xl transition-all duration-500 bg-white/90 backdrop-blur-sm border border-border/30 hover:border-accent/30 group">
-              <Badge className="shadow-md">Увеличенный</Badge>
-              <div className="group-hover:scale-105 transition-transform duration-300">
-                <ComfortTextileLogo variant="full" size="lg" />
-              </div>
+            <Card className="p-12 flex items-center justify-center bg-gradient-to-br from-primary/5 to-accent/5 hover:shadow-2xl transition-all duration-500 border border-border/30">
+              <ComfortTextileLogo variant="variant3" size="md" />
             </Card>
           </div>
-        </section>
 
-        <section className="space-y-16 animate-fade-in">
-          <div className="text-center space-y-4">
-            <h2 className="text-4xl font-bold text-foreground" style={{ fontFamily: 'Montserrat, sans-serif' }}>Символ бренда</h2>
-            <p className="text-lg text-muted-foreground">Знак качества для ярлыков и этикеток</p>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-transparent via-primary to-transparent mx-auto"></div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="p-12 flex items-center justify-center bg-primary/10 hover:shadow-2xl transition-all duration-500 border border-border/30">
+              <ComfortTextileLogo variant="variant1" size="md" />
+            </Card>
+            <Card className="p-12 flex items-center justify-center bg-cream hover:shadow-2xl transition-all duration-500 border border-border/30">
+              <ComfortTextileLogo variant="variant2" size="md" />
+            </Card>
+            <Card className="p-12 flex items-center justify-center bg-accent/10 hover:shadow-2xl transition-all duration-500 border border-border/30">
+              <ComfortTextileLogo variant="variant3" size="md" />
+            </Card>
           </div>
-          
-          <Card className="p-16 bg-gradient-to-br from-white/90 via-white/95 to-white/90 backdrop-blur-sm border border-border/30 shadow-xl">
-            <div className="flex flex-wrap items-end justify-center gap-16">
-              <div className="text-center space-y-6 group">
-                <div className="group-hover:animate-float">
-                  <ComfortTextileLogo variant="icon" size="sm" />
-                </div>
-                <p className="text-sm font-medium text-muted-foreground">40×40</p>
-              </div>
-              <div className="text-center space-y-6 group">
-                <div className="group-hover:animate-float">
-                  <ComfortTextileLogo variant="icon" size="md" />
-                </div>
-                <p className="text-sm font-medium text-muted-foreground">60×60</p>
-              </div>
-              <div className="text-center space-y-6 group">
-                <div className="group-hover:animate-float">
-                  <ComfortTextileLogo variant="icon" size="lg" />
-                </div>
-                <p className="text-sm font-medium text-muted-foreground">100×100</p>
-              </div>
-              <div className="text-center space-y-6 group">
-                <div className="group-hover:animate-float">
-                  <ComfortTextileLogo variant="icon" size="xl" />
-                </div>
-                <p className="text-sm font-medium text-muted-foreground">150×150</p>
-              </div>
-            </div>
-          </Card>
         </section>
 
         <section className="space-y-16 animate-fade-in">

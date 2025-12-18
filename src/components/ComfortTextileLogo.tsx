@@ -1,7 +1,7 @@
 import React from 'react';
 
 type LogoSize = 'sm' | 'md' | 'lg' | 'xl';
-type LogoVariant = 'full' | 'icon' | 'text';
+type LogoVariant = 'full' | 'icon' | 'text' | 'variant1' | 'variant2' | 'variant3';
 
 interface ComfortTextileLogoProps {
   variant?: LogoVariant;
@@ -23,7 +23,7 @@ export const ComfortTextileLogo: React.FC<ComfortTextileLogoProps> = ({
 }) => {
   const config = sizeConfig[size];
 
-  const TextileIcon = () => (
+  const IconVariant1 = () => (
     <svg
       width={config.iconSize}
       height={config.iconSize}
@@ -32,51 +32,51 @@ export const ComfortTextileLogo: React.FC<ComfortTextileLogoProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       className="shrink-0"
     >
-      <rect width="100" height="100" rx="20" fill="url(#gradient-bg)" />
-      
+      <circle cx="50" cy="50" r="45" fill="hsl(var(--primary))" />
       <path
-        d="M25 35 Q50 25 75 35"
+        d="M30 50 L45 65 L70 35"
         stroke="hsl(var(--cream))"
-        strokeWidth="3"
-        fill="none"
-        opacity="0.6"
-      />
-      <path
-        d="M25 45 Q50 35 75 45"
-        stroke="hsl(var(--cream))"
-        strokeWidth="3"
-        fill="none"
-        opacity="0.7"
-      />
-      <path
-        d="M25 55 Q50 45 75 55"
-        stroke="hsl(var(--cream))"
-        strokeWidth="3"
-        fill="none"
-        opacity="0.8"
-      />
-      <path
-        d="M25 65 Q50 55 75 65"
-        stroke="hsl(var(--cream))"
-        strokeWidth="3"
-        fill="none"
-        opacity="0.9"
-      />
-      
-      <circle cx="50" cy="50" r="18" fill="hsl(var(--accent))" opacity="0.3" />
-      <circle cx="50" cy="50" r="12" fill="hsl(var(--cream))" />
-      
-      <path
-        d="M45 50 L50 55 L55 48"
-        stroke="hsl(var(--primary))"
-        strokeWidth="2.5"
+        strokeWidth="6"
         strokeLinecap="round"
         strokeLinejoin="round"
         fill="none"
       />
-      
+      <circle cx="50" cy="50" r="45" stroke="hsl(var(--accent))" strokeWidth="3" fill="none" />
+    </svg>
+  );
+
+  const IconVariant2 = () => (
+    <svg
+      width={config.iconSize}
+      height={config.iconSize}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="shrink-0"
+    >
+      <rect x="10" y="10" width="80" height="80" rx="12" fill="hsl(var(--primary))" />
+      <path d="M25 35 L75 35" stroke="hsl(var(--cream))" strokeWidth="2" opacity="0.7" />
+      <path d="M25 50 L75 50" stroke="hsl(var(--cream))" strokeWidth="2" opacity="0.7" />
+      <path d="M25 65 L75 65" stroke="hsl(var(--cream))" strokeWidth="2" opacity="0.7" />
+      <text x="50" y="55" fill="hsl(var(--cream))" fontSize="32" fontWeight="bold" textAnchor="middle" fontFamily="Montserrat, sans-serif">CT</text>
+    </svg>
+  );
+
+  const IconVariant3 = () => (
+    <svg
+      width={config.iconSize}
+      height={config.iconSize}
+      viewBox="0 0 100 100"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="shrink-0"
+    >
+      <circle cx="50" cy="50" r="42" fill="url(#gradient-v3)" />
+      <path d="M35 30 Q50 40 65 30" stroke="hsl(var(--cream))" strokeWidth="3" fill="none" />
+      <path d="M35 45 Q50 55 65 45" stroke="hsl(var(--cream))" strokeWidth="3" fill="none" />
+      <path d="M35 60 Q50 70 65 60" stroke="hsl(var(--cream))" strokeWidth="3" fill="none" />
       <defs>
-        <linearGradient id="gradient-bg" x1="0" y1="0" x2="100" y2="100">
+        <linearGradient id="gradient-v3" x1="0" y1="0" x2="100" y2="100">
           <stop offset="0%" stopColor="hsl(var(--primary))" />
           <stop offset="100%" stopColor="hsl(var(--accent))" />
         </linearGradient>
@@ -84,36 +84,113 @@ export const ComfortTextileLogo: React.FC<ComfortTextileLogoProps> = ({
     </svg>
   );
 
-  const LogoText = ({ sizeClass }: { sizeClass: string }) => (
-    <div className="flex flex-col justify-center leading-tight">
+  const LogoTextVariant1 = () => (
+    <div className="flex flex-col justify-center leading-none">
       <div 
-        className={`font-bold tracking-tight`}
         style={{ 
-          fontSize: `${config.fontSize * 1.4}px`,
+          fontSize: `${config.fontSize * 1.6}px`,
           fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 800,
+          color: 'hsl(var(--primary))',
+          textTransform: 'uppercase',
+          letterSpacing: '0.05em'
+        }}
+      >
+        Комфорт
+      </div>
+      <div 
+        style={{ 
+          fontSize: `${config.fontSize * 1.1}px`,
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 400,
+          color: 'hsl(var(--accent))',
+          letterSpacing: '0.2em'
+        }}
+      >
+        текстиль
+      </div>
+    </div>
+  );
+
+  const LogoTextVariant2 = () => (
+    <div className="flex items-center gap-1">
+      <div 
+        style={{ 
+          fontSize: `${config.fontSize * 1.8}px`,
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 700,
           color: 'hsl(var(--primary))'
         }}
       >
         КОМФОРТ
       </div>
+      <div className="w-0.5 h-8 bg-primary/50 mx-1"></div>
       <div 
-        className={`font-medium tracking-wide`}
         style={{ 
-          fontSize: `${config.fontSize * 0.85}px`,
+          fontSize: `${config.fontSize * 1.8}px`,
           fontFamily: 'Montserrat, sans-serif',
-          color: 'hsl(var(--muted-foreground))',
-          letterSpacing: '0.15em'
+          fontWeight: 300,
+          color: 'hsl(var(--accent))'
         }}
       >
-        ТЕКСТИЛЬ
+        Текстиль
       </div>
     </div>
   );
 
+  const LogoTextVariant3 = () => (
+    <div className="text-center">
+      <div 
+        style={{ 
+          fontSize: `${config.fontSize * 1.4}px`,
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 600,
+          color: 'hsl(var(--primary))',
+          letterSpacing: '-0.02em'
+        }}
+      >
+        Комфорт Текстиль
+      </div>
+      <div 
+        className="w-full h-0.5 mt-1"
+        style={{
+          background: 'linear-gradient(to right, transparent, hsl(var(--accent)), transparent)'
+        }}
+      ></div>
+    </div>
+  );
+
+  if (variant === 'variant1') {
+    return (
+      <div className={`flex items-center gap-3 ${className}`}>
+        <IconVariant1 />
+        <LogoTextVariant1 />
+      </div>
+    );
+  }
+
+  if (variant === 'variant2') {
+    return (
+      <div className={`flex items-center gap-3 ${className}`}>
+        <IconVariant2 />
+        <LogoTextVariant2 />
+      </div>
+    );
+  }
+
+  if (variant === 'variant3') {
+    return (
+      <div className={`flex items-center gap-3 ${className}`}>
+        <IconVariant3 />
+        <LogoTextVariant3 />
+      </div>
+    );
+  }
+
   if (variant === 'icon') {
     return (
       <div className={className}>
-        <TextileIcon />
+        <IconVariant1 />
       </div>
     );
   }
@@ -121,15 +198,15 @@ export const ComfortTextileLogo: React.FC<ComfortTextileLogoProps> = ({
   if (variant === 'text') {
     return (
       <div className={className}>
-        <LogoText sizeClass={size} />
+        <LogoTextVariant1 />
       </div>
     );
   }
 
   return (
-    <div className={`flex items-center gap-${size === 'sm' ? '2' : size === 'md' ? '3' : '4'} ${className}`}>
-      <TextileIcon />
-      <LogoText sizeClass={size} />
+    <div className={`flex items-center gap-3 ${className}`}>
+      <IconVariant1 />
+      <LogoTextVariant1 />
     </div>
   );
 };
